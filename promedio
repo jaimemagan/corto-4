@@ -1,0 +1,60 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+ 
+ 
+ int arriba=0, abajo =0;
+ float comp(float& , float&);
+ int i;
+ float promedio();
+ 
+ int main()
+ {
+     promedio();
+     
+     
+     
+     return 0;
+ }
+ 
+ float promedio()
+ {
+     float estatura[25];
+     float suma=0;
+     float promedio=0;
+     for ( i = 0; i < 25; i++)
+     {
+         
+         cout<<endl<<"la estatura del estudiante : "<<i+1<< endl;
+         cout<<"colocar la estatura del estudiante : "<<endl; cin>>estatura[i];
+         
+     }
+     
+     for ( i= 0; i < 25; i++)
+     {
+         suma+=estatura[i];
+     }
+     for (i = 0; i < 25; i++);
+     {
+         promedio=suma/25;
+         comp(estatura[i], promedio);
+     }
+     
+     cout<<endl<<"promedio de estatura es : "<<endl<<promedio;
+     cout<<endl<<"esta arriba del promedio : "<<endl<<arriba;
+      cout<<endl<<"esta abajo del promedio : "<<endl<<abajo;
+ }
+ 
+ float comp(float& estatura , float& promedio)
+ {
+     if (estatura>promedio)
+     { 
+         arriba = arriba+1;
+     }
+     else if ( estatura<promedio)
+     {
+         abajo = abajo+1;
+     }
+     
+ }
