@@ -1,0 +1,110 @@
+#include <iostream>
+
+using namespace std;
+
+int n;
+int i;
+int j;
+
+void matriz();
+void final(int ,int , float , int numeros[][5]);
+
+int main(){
+{
+    matriz();
+    
+    return 0;
+    
+}
+void matriz()
+{
+    int numeros [5000][5], filas , columnas=5;
+    float nota=0;
+    
+    cout<<endl<<"coloque el numero de estudiante: "<<endl; cin>>filas;
+    
+    //guardando componenetes en la matria
+    for ( i= 0; i< filas; i++)
+    {
+        for ( j = 0; j < columnas; j++)
+        {
+            cout<<"coloque un nomero: ["<<i<<"]["<< j<<"]: ";
+            cin>>numeros[i][j];
+        }
+        
+    }
+    
+    //enseñar la matriz
+    
+    cout<<endl;
+    for( i = 0; i < filas; i++)
+    {
+        for ( j = 0; j < columnas; j++)
+        {
+            cout<<"x";
+            cout<<numeros[i][j];
+            cout<<"x";
+            
+        }
+        cout<<endl;
+        
+    }
+    
+    // nota final 
+    
+ final(filas,columnas,nota,numeros);
+}
+
+void final( int filas , int columnas, float nota, int numeros[][5])
+
+{
+    for ( i = 0; i < filas; i++)
+    
+    {
+        cout<<endl;
+        cout<< "a cual columna le tomara notas finales?: << endl; cin>>n;
+        
+        if(n==0)
+        {
+            for( j = 0; j < columnas; j++)
+            
+            {
+                nota+=(numeros[n][j]*0.20);
+            }
+            cout<<"la nota final del estudiante es : "<<endl<<nota<<endl;
+            if(nota>=6)
+            {
+                cout<<"a aprobado la nota fianl"<<endl;
+            }
+            else 
+            {
+                cout<<"a reprobado "<<endl;
+            }
+        }
+        else if (n>=1)
+        {
+            for ( j = 0; j < columnas; j ++) 
+        }
+        {
+        nota+=(numeros[n][j]*0.20);
+        }
+        cout<<"la nota final es:"<<endl<<nota<<endl;
+        if(nota>=6)
+        {
+            cout<<"a aprobado el estudiante"<<endl;
+        }
+        else
+        {
+            cout<<"a reprobado el estudiante"<<endl;
+        }
+    }
+    else 
+    {
+        cout<<"cantidad de nuemro de filas es invalido"<<endl;
+    }
+    nota=0;
+}
+}
+  
+    
+    
